@@ -9,9 +9,6 @@ function Current({ Dataa, theme }) {
   const searchCurrent = async () => {
     const check = localStorage.getItem("data");
 
-    if (check) {//es wasashlelia
-      setData(JSON.parse(check));//es wasashlelia
-    } else {//es wasashlelia
       const url = `https://ai-weather-by-meteosource.p.rapidapi.com/current?place_id=${Dataa.place_id}&timezone=auto&language=en&units=auto`;
       const options = {
         method: "GET",
@@ -23,13 +20,10 @@ function Current({ Dataa, theme }) {
       try {
         const response = await fetch(url, options);
         const result = await response.json();
-        localStorage.setItem('data',JSON.stringify(result.current));
         setData(result.current);
-        console.log('current');//es wasashlelia
       } catch (error) {
         console.error(error);
       }
-    }//es wasashlelia
   };
 
   const date = new Date();
