@@ -34,7 +34,7 @@ function Search({ onSearchChange, theme }) {
   };
 
   return (
-    <div className=" w-5/12 flex">
+    <div className=" w-52 flex">
       <form
         action=""
         className={`w-full flex rounded-3xl overflow-hidden pr-1 justify-center items-center shadow-3xl ${theme?'bg-body':'bg-slate-200'}`}
@@ -45,7 +45,7 @@ function Search({ onSearchChange, theme }) {
           placeholder="Search for your preffered city..."
           onChange={handleOnChange}
         />
-        <CiSearch className={`h-10 w-10  hover:fill-orange-500 ${theme?'fill-slate-50':'fill-body'}`} onClick={handleClick} />
+        <CiSearch className={`h-10 w-10  hover:fill-orange-500 duration-300 ${theme?'fill-slate-50':'fill-body'}`} onClick={handleClick} />
       </form>
     </div>
   );

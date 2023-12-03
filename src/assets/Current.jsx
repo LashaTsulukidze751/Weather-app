@@ -7,23 +7,22 @@ function Current({ Dataa, theme }) {
   }, [Dataa]);
 
   const searchCurrent = async () => {
-    const check = localStorage.getItem("data");
-
-      const url = `https://ai-weather-by-meteosource.p.rapidapi.com/current?place_id=${Dataa.place_id}&timezone=auto&language=en&units=auto`;
-      const options = {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key": API_KEY,
-          "X-RapidAPI-Host": "ai-weather-by-meteosource.p.rapidapi.com",
-        },
-      };
-      try {
-        const response = await fetch(url, options);
-        const result = await response.json();
-        setData(result.current);
-      } catch (error) {
-        console.error(error);
-      }
+    const url = `https://ai-weather-by-meteosource.p.rapidapi.com/current?place_id=${Dataa.place_id}&timezone=auto&language=en&units=auto`;
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": API_KEY,
+        "X-RapidAPI-Host": "ai-weather-by-meteosource.p.rapidapi.com",
+      },
+    };
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      setData(result.current);
+      console.log("current");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const date = new Date();
