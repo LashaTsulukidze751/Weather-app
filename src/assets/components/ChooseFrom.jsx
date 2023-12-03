@@ -49,7 +49,7 @@ function ChooseFrom({ onChoose, theme }) {
       >
         <button>Choose City</button>
         <IoIosArrowBack
-          className={`h-10 w-10 duration-500  hover:fill-orange-500 ${
+          className={`h-10 w-10 duration-500   hover:fill-orange-500 ${
             theme ? "fill-slate-50" : "fill-body"
           } ${dropDown ? " -rotate-90" : ""} `}
         />
