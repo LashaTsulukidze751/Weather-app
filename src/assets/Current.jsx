@@ -11,7 +11,7 @@ function Current({ Dataa, theme }) {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": API_KEY,
+        "X-RapidAPI-Key": API_KEY ,
         "X-RapidAPI-Host": "ai-weather-by-meteosource.p.rapidapi.com",
       },
     };
