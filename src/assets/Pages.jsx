@@ -23,7 +23,7 @@ function Pages({ theme }) {
         <Search onSearchChange={handleValueChange} theme={theme} />
       </div>
       {/* current weather */}
-      {/* <Current Dataa={value} theme={theme} /> */}
+      <Current Dataa={value} theme={theme} />
       <Daily Dataa={value} theme={theme}/>
     </div>
   );

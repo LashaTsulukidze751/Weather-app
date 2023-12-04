@@ -42,7 +42,7 @@ function ChooseFrom({ onChoose, theme }) {
   ];
 
   useEffect(()=>{
-    //handleChoose();
+    handleChoose();
   },[choosenValue])
 
   const handleClick = (city) =>{
