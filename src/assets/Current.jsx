@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { API_KEY } from "./API";
-function Current({ Dataa , theme }) {
+function Current({ Dataa  , theme }) {
   const [data, setData] = useState({});
   useEffect(() => {
     searchCurrent();
