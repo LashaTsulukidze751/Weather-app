@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
+import { API_KEY } from "../API";
 
 function ChooseFrom({ onChoose, theme }) {
   const [dropDown, setDropDown] = useState(false);
+  const [choosenValue, setChoosenValue] = useState("")
+
   const citys = [
     "Abu Dhabi",
     "Amsterdam",
@@ -38,7 +41,36 @@ function ChooseFrom({ onChoose, theme }) {
     "Zagreb",
   ];
 
-  const Citys = [];
+  const handleClick = (city) =>{
+    setChoosenValue(city);
+    handleChoose();
+  
+  }
+
+  const handleChoose = async () => {
+    const url = `https://ai-weather-by-meteosource.p.rapidapi.com/find_places?text=${choosenValue}&language=en`;
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": API_KEY,
+        "X-RapidAPI-Host": "ai-weather-by-meteosource.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      onChoose({
+        place_id:result[0].place_id,
+        country: result[0].country        
+      });
+      console.log('shearch')
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
   return (
     <div className={`w-52 `}>
       <div
@@ -49,7 +81,7 @@ function ChooseFrom({ onChoose, theme }) {
       >
         <button>Choose City</button>
         <IoIosArrowBack
-          className={`h-10 w-10 duration-500  hover:fill-orange-500 ${
+          className={`h-10 w-10 duration-500   hover:fill-orange-500 ${
             theme ? "fill-slate-50" : "fill-body"
           } ${dropDown ? " -rotate-90" : ""} `}
         />
@@ -57,7 +89,7 @@ function ChooseFrom({ onChoose, theme }) {
       <div className={`flex flex-wrap absolute w-full -left-0 -top- bg-body color `}>
         {dropDown
           ? citys.map((city) => {
-              return <button onClick={()=>{onChoose(city)}} className={`w-1/2 text-center h-8 text-white hover:bg-gray-700 duration-400`}>{city}</button>;
+              return <button onClick={()=>{handleClick(city)}} className={`w-1/2 text-center h-8 text-white hover:bg-gray-700 duration-400`}>{city}</button>;
             })
           : ""}
       </div>
