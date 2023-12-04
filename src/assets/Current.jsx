@@ -52,11 +52,11 @@ function Current({ Dataa  , theme }) {
             <h3>{Day[date.getDay()]}</h3>
           </div>
         </div>
-        <div className=" flex flex-col justify-center items-center w-40 h-40">
+        <div className=" flex flex-col justify-center items-center  w-1/4">
           <img
-            src={`./WeatherIcons/${data.icon}.png`}
+            src={`./WeatherIcons/${data.icon_num}.png`}
             alt={`WeatherIcons ${data.icon}`}
-            className=""
+            className=" w-full"
           />
           <p>{data.icon}</p>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { API_KEY } from "../API";
 
@@ -41,10 +41,14 @@ function ChooseFrom({ onChoose, theme }) {
     "Zagreb",
   ];
 
+  useEffect(()=>{
+    //handleChoose();
+  },[choosenValue])
+
   const handleClick = (city) =>{
     setChoosenValue(city);
-    handleChoose();
-  
+    setDropDown(false)
+    console.log(city)
   }
 
   const handleChoose = async () => {
@@ -64,7 +68,7 @@ function ChooseFrom({ onChoose, theme }) {
         place_id:result[0].place_id,
         country: result[0].country        
       });
-      console.log('shearch')
+      console.log('choose')
     } catch (error) {
       console.error(error);
     }
