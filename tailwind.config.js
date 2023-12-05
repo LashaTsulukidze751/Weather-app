@@ -11,8 +11,11 @@ export default {
       },
       backgroundColor: {
 
-        'body': 'rgb(62,62,62)',
-        'elems': 'rgb(68,68,68)'
+        'dark_1': '#15202B',
+        'dark_2': '#192734',
+        'dark_3': '#22303C',
+        'light_1': '#F2F2F2',
+        'light_2': '#8899A6',
       }
     },
   },

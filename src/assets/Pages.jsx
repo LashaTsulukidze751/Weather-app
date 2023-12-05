@@ -17,8 +17,8 @@ function Pages({ theme }) {
   };
 
   return (
-    <div className={` flex flex-col items-center bg-inherit w-11/12`}>
-      <div className=" flex justify-around p-5 w-full relative">
+    <div className={` flex flex-col items-center bg-inherit w-11/12 `}>
+      <div className=" flex justify-around p-5 w-full relative flex-col-reverse items-center">
         <ChooseFrom onChoose={handleValueChange} theme={theme} />
         <Search onSearchChange={handleValueChange} theme={theme} />
       </div>

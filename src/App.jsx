@@ -9,7 +9,7 @@ function App() {
   }
 
   return (
-    <div className={`flex flex-col items-center ${theme?'bg-slate-600':'bg-red-700'}`}>
+    <div className={`flex flex-col items-center ${theme ? ' bg-dark_2 text-white':' bg-light_1 text-black'} `}>
       <Header themeChanger={handleThemeChange} theme={theme}/>
       <Pages theme={theme}/>
     </div>
