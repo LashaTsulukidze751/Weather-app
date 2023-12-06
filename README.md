@@ -1,8 +1,13 @@
-# React + Vite
+=>Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+->This is simple React project which can display current weather, 21 day weather forcast and some other stuff.
 
-Currently, two official plugins are available:
+->Used tools react, tailwind, html.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+->used API: AI Weather by Meteosource
+
+Changelog:
+->Version 1.0: "inital upload" uploaded project on github.
+->version 1.1: "21 day forcast" added 21 day forcast component.
+->Version 1.2: "responsive design" app is fully functional on any device.
+->Version 1.3: "functional weather app" app is fully deployed on github without any bugs.
