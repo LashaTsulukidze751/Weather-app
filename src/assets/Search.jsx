@@ -34,18 +34,18 @@ function Search({ onSearchChange, theme }) {
   };
 
   return (
-    <div className=" w-52 flex m-2">
+    <div className=" w-52 flex rounded-md overflow-hidden  ">
       <form
         action=""
-        className={`w-full flex rounded-r-lg border overflow-hidden pr-1 justify-center items-center shadow-3xl ${theme?' bg-dark_1':'bg-slate-200'}`}
+        className={`w-full flex  border  pr-1 justify-center items-center   ${theme?' bg-dark_1':'bg-slate-200 border-orange-500' }`}
       >
         <input
           type="text"
-          className={`w-full h-full bg-inherit rounded-3xl px-3 outline-none ${theme?'text-white':'text-black'}`}
+          className={`w-full h-full bg-inherit rounded-3xl px-3 outline-none  ${theme?'text-white':'text-black'}`}
           placeholder="Search for city"
           onChange={handleOnChange}
         />
-        <CiSearch className={`h-10 w-10  hover:fill-orange-500 duration-300 ${theme?'fill-slate-50':'fill-body'}`} onClick={handleClick} />
+        <CiSearch className={`h-10 w-10  hover:fill-orange-500 duration-300 ${theme?'fill-slate-200':'fill-body'}`} onClick={handleClick} />
       </form>
     </div>
   );
