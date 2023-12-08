@@ -1,5 +1,5 @@
 //components
-import Search from "./Search";
+import Search from "./components/Search";
 import Current from "./Current";
 import ChooseFrom from "./components/ChooseFrom";
 import Daily from "./Daily";
@@ -22,9 +22,8 @@ function Pages({ theme }) {
         <ChooseFrom onChoose={handleValueChange} theme={theme} />
         <Search onSearchChange={handleValueChange} theme={theme} />
       </div>
-      {/* current weather */}
       <Current Dataa={value} theme={theme} />
-      <Daily Dataa={value} theme={theme}/>
+      <Daily Dataa={value} theme={theme} />
     </div>
   );
 }

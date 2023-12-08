@@ -16,6 +16,15 @@ export default {
         'dark_3': '#22303C',
         'light_1': '#F2F2F2',
         'light_2': '#8899A6',
+      },
+      animation: {
+        'spin-rev': 'wiggle 0.8s linear infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        }
       }
     },
   },

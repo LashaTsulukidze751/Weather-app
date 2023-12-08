@@ -67,7 +67,6 @@ function ChooseFrom({ onChoose, theme }) {
         place_id: result[0].place_id,
         country: result[0].country,
       });
-      console.log("choose");
     } catch (error) {
       console.error(error);
     }
@@ -75,36 +74,30 @@ function ChooseFrom({ onChoose, theme }) {
 
   return (
     <div
-      className={`w-52 m-2  rounded-md overflow-hidden ${
-        theme ? "bg-dark_1" : "bg-slate-200 border-orange-500"
-      }`}
+      className={`w-52 m-2  rounded-md overflow-hidden bg-opacity-50 
+      ${theme ? "bg-dark_1" : "bg-slate-200 border-orange-500"}`}
     >
       <div
         onClick={() => setDropDown(!dropDown)}
-        className={`cursor-pointer border flex justify-between items-center ${
-          theme ? "bg-dark_1" : " bg-slate-200 border-orange-500"
-        }`}
+        className={`cursor-pointer border flex justify-between items-center 
+        ${theme ? "bg-dark_1" : " bg-slate-200 border-orange-500"}`}
       >
         <button className="px-3">Choose City</button>
         <IoIosArrowBack
-          className={`h-10 w-10 duration-500 hover:fill-orange-500 ${
-            theme ? "fill-slate-50" : "fill-body"
-          } ${dropDown ? " -rotate-90" : ""} `}
+          className={`h-10 w-10 duration-500 hover:fill-orange-500 
+          ${theme ? "fill-slate-50" : "fill-body"} ${dropDown ? " -rotate-90" : ""} `}
         />
       </div>
       <div
-        className={`flex flex-wrap absolute z-10 w-full -left-0  bg-inherit ${
-          dropDown ? "visible" : "hidden"
-        } border `}
+        className={`flex flex-wrap absolute z-10 w-full -left-0  bg-inherit 
+        ${dropDown ? "visible" : "hidden"} border `}
       >
         {dropDown
           ? citys.map((city, index) => {
               return (
                 <button
                   key={index}
-                  onClick={() => {
-                    handleClick(city);
-                  }}
+                  onClick={() => {handleClick(city)}}
                   className={`w-1/2 text-center h-8 duration-100 
                   ${theme ? "bg-dark_1" : "bg-slate-300"}
                    hover:bg-gray-700 hover:text-white hover:border hover:font-bold

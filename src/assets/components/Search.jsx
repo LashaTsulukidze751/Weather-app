@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { API_KEY } from "./API";
+import { API_KEY } from "../API";
 
 function Search({ onSearchChange, theme }) {
   const [input, setInput] = useState("");
@@ -27,7 +27,6 @@ function Search({ onSearchChange, theme }) {
         place_id:result[0].place_id,
         country: result[0].country        
       });
-      console.log('shearch')
     } catch (error) {
       console.error(error);
     }
@@ -35,17 +34,14 @@ function Search({ onSearchChange, theme }) {
 
   return (
     <div className=" w-52 flex rounded-md overflow-hidden  ">
-      <form
-        action=""
-        className={`w-full flex  border  pr-1 justify-center items-center   ${theme?' bg-dark_1':'bg-slate-200 border-orange-500' }`}
-      >
+      <form className={`w-full flex border pr-1 justify-center items-center ${theme?' bg-dark_1':'bg-slate-200 border-orange-500' }`}>
         <input
           type="text"
           className={`w-full h-full bg-inherit rounded-3xl px-3 outline-none  ${theme?'text-white':'text-black'}`}
           placeholder="Search for city"
           onChange={handleOnChange}
         />
-        <CiSearch className={`h-10 w-10  hover:fill-orange-500 duration-300 ${theme?'fill-slate-200':'fill-body'}`} onClick={handleClick} />
+        <CiSearch className={`h-10 w-10 hover:fill-orange-500 duration-300 ${theme?'fill-slate-200':'fill-body'}`} onClick={handleClick} />
       </form>
     </div>
   );
