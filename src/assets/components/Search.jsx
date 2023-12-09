@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { API_KEY } from "../API";
+import { API_KEY2 } from "../API";
 
 function Search({ onSearchChange, theme }) {
   const [input, setInput] = useState("");
@@ -15,7 +15,7 @@ function Search({ onSearchChange, theme }) {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": API_KEY,
+        "X-RapidAPI-Key": API_KEY2,
         "X-RapidAPI-Host": "ai-weather-by-meteosource.p.rapidapi.com",
       },
     };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import { API_KEY } from "../API";
+import { API_KEY2 } from "../API";
 
 function ChooseFrom({ onChoose, theme }) {
   const [dropDown, setDropDown] = useState(false);
@@ -55,7 +55,7 @@ function ChooseFrom({ onChoose, theme }) {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": API_KEY,
+        "X-RapidAPI-Key": API_KEY2,
         "X-RapidAPI-Host": "ai-weather-by-meteosource.p.rapidapi.com",
       },
     };

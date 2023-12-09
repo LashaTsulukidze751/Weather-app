@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { API_KEY } from "./API";
+import { API_KEY2 } from "./API";
 import { GiWindHole } from "react-icons/gi";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -16,7 +16,7 @@ function Current({ Dataa, theme }) {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": API_KEY,
+        "X-RapidAPI-Key": API_KEY2,
         "X-RapidAPI-Host": "ai-weather-by-meteosource.p.rapidapi.com",
       },
     };
