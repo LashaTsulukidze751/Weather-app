@@ -59,7 +59,7 @@ function Daily({ Dataa, theme }) {
           <div key={index} className={`w-1/3 rounded p-5 flex flex-col items-center  ${theme?'hover:bg-dark_3':'hover:bg-slate-300'} lg:w-1/4 xl:w-1/5`}>
             <p className=" font-bold">{days[currentDate.getDay()]}</p>
             <p>{`${currentDate.getDate()} ${months[currentDate.getMonth()]}`}</p>
-            <img src={`./WeatherIcons/${dat.icon}.png`} alt="" />
+            <img src={`./src/assets/WeatherIcons/${dat.icon}.png`} alt="" />
             <div className="flex justify-center  w-1/2">
               <p>{`${dat.dew_point_min}°`}</p>
               <p className=" ml-3">{`${dat.dew_point_max}°`}</p>
