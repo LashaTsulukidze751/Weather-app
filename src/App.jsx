@@ -9,7 +9,7 @@ function App() {
   }
 
   return (
-    <div className={`flex flex-col items-center  bg-no-repeat bg-cover duration-200 ${theme ? "bg-[url('/src/assets/WeatherIcons/liquid-cheesedark.png')] text-white":"bg-[url('/src/assets/WeatherIcons/liquid-cheese.png')] text-black"} `}>
+    <div className={`flex flex-col items-center  bg-no-repeat bg-cover duration-200 ${theme ? "bg-[url('/WeatherIcons/liquid-cheesedark.png')] text-white":"bg-[url('/WeatherIcons/liquid-cheese.png')] text-black"} `}>
       <Header themeChanger={handleThemeChange} theme={theme}/>
       <Pages theme={theme}/>
     </div>
