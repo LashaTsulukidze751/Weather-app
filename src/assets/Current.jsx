@@ -72,7 +72,7 @@ function Current({ Dataa, theme }) {
         </div>
         <div className=" flex flex-col justify-center items-center  w-1/4 ">
           <img
-            src={`./src/assets/WeatherIcons/${data.icon_num}.png`}
+            src={`/src/assets/WeatherIcons/${data.icon_num}.png`}
             alt={`Weather ${data.icon}`}
             className="w-fit md:w-4/6 lg:w-5/6 xl:w-5/6"
           />
